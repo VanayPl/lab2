@@ -4,53 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Резюме | Якимчук Іван</title>
+    
+    <!-- 1. Зовнішні стилі (External CSS) -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- 2. Внутрішні стилі (Internal CSS) -->
+    <style>
+        /* Внутрішній стиль для статусного бейджа та підзаголовка */
+        .status-badge {
+            display: inline-block;
+            background-color: #dbeafe;
+            color: #1e40af;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            margin-top: 8px;
+            border: 1px solid #bfdbfe;
+        }
+
+        .subtitle {
+            font-size: 1.15rem;
+            color: #4b5563;
+            margin-top: 4px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Якимчук Іван</h1>
-        <p>Junior Developer / Початківець у розробці</p>
-        <p>
-            Email: <a href="mailto:ivan.yakymchuk@example.com">ivan.yakymchuk@example.com</a> | 
-            GitHub: <a href="https://github.com/VanayPl" target="_blank" rel="noopener noreferrer">github.com/VanayPl</a>
-        </p>
-    </header>
+    <div class="page-container">
+        <!-- Селектор ID: #main-header -->
+        <header id="main-header">
+            <h1>Якимчук Іван</h1>
+            <p class="subtitle">Junior Developer / Початківець у розробці</p>
+            
+            <!-- 3. Вбудований стиль (Inline CSS) -->
+            <span class="status-badge" style="background-color: #ecfdf5; color: #047857; border-color: #a7f3d0;">
+                ● Відкритий до нових пропозицій та практики
+            </span>
 
-    <main>
-        <section>
-            <h2>Про мене</h2>
-            <p>
-                Вмотивований розробник-початківець із досвідом написання базових алгоритмів, 
-                роботи з Git та створення вебінтерфейсів. Прагну розвиватися в напрямку сучасної фронтенд-розробки.
-            </p>
-        </section>
+            <div class="contacts-wrapper">
+                <a class="contact-link" href="mailto:ivan.yakymchuk@example.com">
+                    ✉️ ivan.yakymchuk@example.com
+                </a>
+                <span>|</span>
+                <a class="contact-link" href="https://github.com/VanayPl" target="_blank" rel="noopener noreferrer">
+                    🔗 github.com/VanayPl
+                </a>
+            </div>
+        </header>
 
-        <section>
-            <h2>Освіта та практичний досвід</h2>
-            <ul>
-                <li>
-                    <strong>Поглиблене вивчення інформатики в ліцеї (2022 — 2026):</strong>
-                    4 роки системного вивчення алгоритмів, структур даних та основ комп'ютерних наук.
-                </li>
-                <li>
-                    <strong>Лабораторний практикум із веброзробки (2026):</strong>
-                    створення семантичної структури вебсторінок на чистому HTML5 та перенесення інтерфейсу на компонентну архітектуру React за допомогою Vite.
-                </li>
-            </ul>
-        </section>
+        <main class="grid-layout">
+            <!-- Селектор ID: #about-section та селектор класу: .card -->
+            <section id="about-section" class="card card-full-width">
+                <h2>Про мене</h2>
+                <p>
+                    Вмотивований розробник-початківець із досвідом написання базових алгоритмів, 
+                    роботи з Git та створення вебінтерфейсів. Прагну розвиватися в напрямку сучасної фронтенд-розробки.
+                </p>
+            </section>
 
-        <section>
-            <h2>Технічні навички</h2>
-            <ul>
-                <li>HTML5, базові концепції веброзробки</li>
-                <li>React.js (створення базових компонентів, робота з Vite)</li>
-                <li>Система контролю версій Git та сервіс GitHub</li>
-                <li>Алгоритмічне мислення та комп'ютерна логіка</li>
-            </ul>
-        </section>
-    </main>
+            <section class="card">
+                <h2>Освіта та практичний досвід</h2>
+                <ul class="timeline-list">
+                    <li>
+                        <strong>Поглиблене вивчення інформатики в ліцеї (2022 — 2026):</strong>
+                        <p>4 роки системного вивчення алгоритмів, структур даних та основ комп'ютерних наук.</p>
+                    </li>
+                    <li>
+                        <strong>Лабораторний практикум із веброзробки (2026):</strong>
+                        <p>Створення семантичної структури вебсторінок на чистому HTML5 та перенесення інтерфейсу на компонентну архітектуру React за допомогою Vite.</p>
+                    </li>
+                </ul>
+            </section>
 
-    <footer>
-        <p>&copy; 2026 Якимчук Іван. Усі права захищено.</p>
-    </footer>
+            <section class="card">
+                <h2>Технічні навички</h2>
+                <div class="skills-grid">
+                    <span class="skill-tag">HTML5 & Семантика</span>
+                    <span class="skill-tag">CSS3 (Flexbox & Grid)</span>
+                    <span class="skill-tag">React.js & Vite</span>
+                    <span class="skill-tag">Git & GitHub</span>
+                    <span class="skill-tag">Алгоритми та структури</span>
+                    <span class="skill-tag">Responsive Design</span>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Якимчук Іван. Усі права захищено.</p>
+        </footer>
+    </div>
 </body>
 </html>
